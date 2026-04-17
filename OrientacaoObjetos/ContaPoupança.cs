@@ -11,7 +11,7 @@ namespace OrientacaoObjetos
             Console.WriteLine($"Rendimento calculado: R${rendimento} aplicado. Saldo atual: R${Saldo}");
         }
 
-        public override void MostrarDados() // override -> sobrescreve o método da classe pai (ContaBancaria)
+        public override void MostrarDados() // override -> sobrescreve o método da classe pai (ContaBancaria) polimorfismo
         {
             Console.WriteLine("------------Dados da Conta Poupança------------");
             base.MostrarDados(); // chama o método da classe pai (ContaBancaria)
