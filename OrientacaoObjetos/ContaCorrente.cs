@@ -26,5 +26,14 @@ namespace OrientacaoObjetos
                     Console.WriteLine("---------------------------------------");
                 }
         }
+
+        public override void MostrarDados() //override -> sobrescreve o método da classe pai (ContaBancaria)
+        {
+            Console.WriteLine("------------Dados da Conta Corrente------------");
+            base.MostrarDados(); // chama o método da classe pai (ContaBancaria)
+            Console.WriteLine($"Limite do Cheque Especial: R${LimiteChequeEspecial}");
+            Console.WriteLine("----------------------------------");
+        }
+
     }
 }

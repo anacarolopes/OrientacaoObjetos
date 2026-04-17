@@ -9,36 +9,34 @@ Encapsulamento é o conceito de proteger os dados de uma classe, permitindo que 
 
 using OrientacaoObjetos;
 
-Cliente clienteA = new Cliente();
-clienteA.Nome = "Ana Carolina";
-clienteA.CPF = "12345678912";
-
-Cliente clienteB = new Cliente();
-clienteB.Nome = "José da Silva";
-clienteB.CPF = "87321654321";
-
-ContaPoupança contaPoupança = new ContaPoupança();
-
-contaPoupança.Titular = clienteA;
-contaPoupança.NumeroConta = "12345-6";
-contaPoupança.Agencia = "0001";
-contaPoupança.TaxaRendimento = 0.01;
-
-contaPoupança.Depositar(500);
-
-contaPoupança.AplicarRendimento();
-
-contaPoupança.MostrarDados();
-
-ContaCorrente contaCorrente = new ContaCorrente
+Cliente clienteA = new Cliente()
 {
-    Titular = clienteB,
-    NumeroConta = "65432-1",
+    Nome = "João Silva",
+    CPF = "123.456.789-00"
+};
+
+Cliente clienteB = new Cliente()
+{
+    Nome = "Ana Carolina",
+    CPF = "777.888.556-11"
+};
+
+ContaCorrente contaCorrente = new ContaCorrente()
+{
+    Titular = clienteA,
+    NumeroConta = "12345-6",
     Agencia = "0001",
     LimiteChequeEspecial = 500
 };
 
-contaCorrente.MostrarDados();
-contaCorrente.UsarChequeEspecial(100);
 
+ContaPoupança contaPoupança = new ContaPoupança()
+{
+    Titular = clienteB,
+    NumeroConta = "65432-1",
+    Agencia = "0001",
+    TaxaRendimento = 0.01
+};
 
+contaCorrente.Depositar(500);
+contaCorrente.Depositar(200, "Depósito para pagar contas");

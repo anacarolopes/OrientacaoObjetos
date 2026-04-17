@@ -37,13 +37,29 @@ namespace OrientacaoObjetos
             }
         }
 
-        public void MostrarDados()
+        public virtual void MostrarDados() // virtual -> permite que o método seja sobrescrito em classes filhas (polimorfismo)
         {
             Console.WriteLine("----------------------------------");
             Console.WriteLine($"Titular: {Titular.Nome} - CPF: {Titular.CPF}");
             Console.WriteLine($"Conta: {NumeroConta} - Agência: {Agencia}");
             Console.WriteLine($"Saldo: {Saldo}");
             Console.WriteLine("----------------------------------");
+        }
+
+        public void Depositar(double valor, string descricao) // sobrecarga de método (overload) -> mesma assinatura, mas com parâmetros diferentes
+        {
+           if(valor > 0)
+           {
+                Saldo += valor;
+                Console.WriteLine($"Depósito de R${valor} realizado. Saldo atual: R${Saldo}");
+                Console.WriteLine($"Descrição do depósito: {descricao}");
+                Console.WriteLine("----------------------------------");
+           }
+           else
+           {
+                Console.WriteLine($"Valor de depósito inválido: R${valor}. O valor deve ser positivo.");
+                Console.WriteLine("----------------------------------");
+           }
         }
     }
 }

@@ -12,3 +12,4 @@ C:\Users\pb00003761\Projetos\OrientacaoObjetos\OrientacaoObjetos\obj\Debug\net10
 C:\Users\pb00003761\Projetos\OrientacaoObjetos\OrientacaoObjetos\obj\Debug\net10.0\OrientacaoObjetos.pdb
 C:\Users\pb00003761\Projetos\OrientacaoObjetos\OrientacaoObjetos\obj\Debug\net10.0\OrientacaoObjetos.genruntimeconfig.cache
 C:\Users\pb00003761\Projetos\OrientacaoObjetos\OrientacaoObjetos\obj\Debug\net10.0\ref\OrientacaoObjetos.dll
+C:\Users\pb00003761\Projetos\OrientacaoObjetos\OrientacaoObjetos\obj\Debug\net10.0\OrientacaoObjetos.sourcelink.json
